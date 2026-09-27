@@ -1,3 +1,5 @@
+import fs from "fs/promises"
+import path from "path"
 import { NextResponse } from "next/server"
 import { decodeEmail, decodePhoneNumber } from "@/utils/string"
 import sharp from "sharp"
@@ -44,6 +46,14 @@ export async function GET() {
 
 async function getVCardPhoto(url: string) {
   try {
+    // Local avatars are read from /public directly; the site may not be
+    // reachable over HTTP while the route is prerendered at build time.
+    if (url.startsWith("/")) {
+      const buffer = await fs.readFile(path.join(process.cwd(), "public", url))
+      const jpegBuffer = await convertImageToJpeg(buffer)
+      return { image: jpegBuffer.toString("base64"), mime: "jpeg" }
+    }
+
     const res = await fetch(url)
 
     if (!res.ok) {

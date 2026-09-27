@@ -33,7 +33,7 @@ export const USER: User = {
 - Off the clock I grind DSA on [LeetCode](https://leetcode.com/u/aarvnd/) and [GeeksforGeeks](https://www.geeksforgeeks.org/profile/aarvnd) — 1,000+ problems and counting.
 - Open to full-stack / platform engineering work, automation projects and freelance builds — idea to deployed product.
 `,
-  avatar: "https://arvind.codes/images/avatar.jpg",
+  avatar: "/images/avatar.jpg",
   avatarVariants: {
     lightOff: "/images/avatar-chrome.jpg",
     lightOn: "/images/avatar.jpg",

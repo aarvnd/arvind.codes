@@ -1,6 +1,7 @@
 import type { Person } from "schema-dts"
 
 import { SITE_INFO } from "@/config/site"
+import { absoluteUrl } from "@/lib/utils"
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
 import { USER } from "@/features/portfolio/data/user"
 
@@ -20,7 +21,7 @@ export const personJsonLd: Person = {
   name: USER.displayName,
   alternateName: [USER.username],
   identifier: USER.username,
-  image: USER.avatar,
+  image: absoluteUrl(USER.avatar),
   url: SITE_INFO.url,
   // Public profiles opt in via their `sameAs` flag (Knowledge Graph).
   sameAs: SOCIAL_LINKS.filter((link) => link.sameAs).map((link) => link.href),

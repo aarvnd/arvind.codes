@@ -139,21 +139,21 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Backend & Database"],
+    categories: ["Backend"],
   },
   {
     key: "express",
     title: "Express",
     href: "https://expressjs.com",
     icon: <RouteIcon />,
-    categories: ["Framework","Backend"],
+    categories: ["Backend"],
   },
   {
     key: "spring-boot",
     title: "Spring Boot",
     href: "https://spring.io/projects/spring-boot",
     icon: <LeafIcon />,
-    categories: ["Framework","Backend"],
+    categories: ["Backend"],
   },
   {
     key: "sqlite",
@@ -181,7 +181,7 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Backend & Database"],
+    categories: ["Database"],
   },
   {
     key: "linux",
@@ -202,7 +202,7 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Backend & Database"],
+    categories: ["Infrastructure"],
   },
   {
     key: "pm2",
@@ -223,7 +223,7 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Workflow & AI"],
+    categories: ["Infrastructure"],
   },
   {
     key: "cloudflare",
@@ -265,7 +265,7 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Workflow & AI"],
+    categories: ["AI"],
   },
   {
     key: "gemini",
@@ -279,7 +279,7 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Workflow & AI"],
+    categories: ["AI"],
   },
   {
     key: "cursor",
@@ -293,7 +293,7 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Workflow & AI"],
+    categories: ["AI"],
   },
   {
     key: "git",
@@ -307,13 +307,13 @@ export const TECH_STACK: TechStack[] = [
         />
       </svg>
     ),
-    categories: ["Workflow & AI"],
+    categories: ["Workflow"],
   },
   {
     key: "github",
     title: "GitHub",
     href: "https://github.com",
     icon: <GitHubIcon />,
-    categories: ["Workflow & AI"],
+    categories: ["Workflow"],
   },
 ]
