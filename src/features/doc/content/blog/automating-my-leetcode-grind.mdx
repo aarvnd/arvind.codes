@@ -1,0 +1,51 @@
+---
+title: How I automated my LeetCode grind (without cheating myself)
+description: A cron bot that solves, compiles and ships two problems a day to GitHub. The architecture, the compile-gate trick, and why the streak still means something.
+image: https://arvind.codes/images/og.png
+createdAt: 2026-08-14
+updatedAt: 2026-09-27
+---
+
+Consistency is the whole game in DSA prep. Miss three days and the momentum is gone. So I built a safety net: a bot that keeps my practice pipeline moving every single day, while I still do the actual learning.
+
+## The pipeline
+
+Every morning a cron job on my VPS:
+
+1. Fetches the **Problem of the Day** plus one more problem, alternating Easy/Medium
+2. Generates a Java solution with an LLM
+3. **Compiles it with `javac`**. This is the hard gate: if it doesn't compile, it doesn't ship
+4. Submits it, polls the verdict and pushes to my [DSA repo](https://github.com/aarvnd/DSA-Leetcode) in LeetSync format
+5. Pings me on WhatsApp with the day's summary
+
+## The compile gate
+
+This is the interesting engineering bit. LLM code *looks* right more often than it *is* right. The fix is boring and effective:
+
+```python
+import subprocess
+
+def compiles(path: str) -> bool:
+    result = subprocess.run(
+        ["javac", path],
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    return result.returncode == 0
+```
+
+On failure the compiler output goes back into the prompt and the bot retries. Two or three rounds almost always converge, and nothing broken ever reaches the repo.
+
+LeetCode's Java starter snippet documents provided types (`ListNode`, `TreeNode`) inside its leading comment block. The gate parses that comment, extracts the real class definitions and compiles them together with the solution, so there are no hand-maintained stubs.
+
+## Lessons from running it in production
+
+- **APIs lie about auth.** LeetCode's GraphQL endpoint serves most public profile data without a session, but submissions need a real cookie, and that cookie has no expiry claim. Treat it as valid until proven dead, and warn yourself three days before it dies.
+- **An anonymous session is not `null`.** The daily query returns `"NotStart"` for an invalid session, not an error. Check `userStatus.isSignedIn` explicitly or a bad cookie will validate as good.
+- **Idempotency beats scheduling.** The bot checks what already exists before writing. Crashes, re-runs, double crons: nothing duplicates.
+- **A streak you didn't earn is worthless; a pipeline you built isn't.** I still solve problems by hand. The bot covers travel days and keeps the repo alive, and building it taught me more about APIs, process control and failure handling than a week of grinding would have.
+
+## What's next
+
+The same pipeline feeds this site: solved problems land in the repo with complexity notes and runtime stats automatically, and my [LeetCode profile](https://leetcode.com/u/aarvnd/) keeps the streak honest.
