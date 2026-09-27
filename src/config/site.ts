@@ -12,25 +12,12 @@ export const SITE_INFO = {
   keywords: USER.keywords,
 }
 
-export const LICENSE = {
-  name: "MIT License",
-  url: "https://github.com/ncdai/chanhdai.com/blob/main/LICENSE",
-}
-
 export const META_THEME_COLORS = {
   light: "#ffffff",
   dark: "#09090b",
 }
 
 export const MAIN_NAV: NavItem<Route>[] = [
-  {
-    title: "Components",
-    href: "/components",
-  },
-  {
-    title: "Blocks",
-    href: "/blocks",
-  },
   {
     title: "Blog",
     href: "/blog",
@@ -48,10 +35,6 @@ export const MOBILE_NAV: NavItem<Route>[] = [
 /** No X account yet; keeps twitter card metadata optional. */
 export const X_HANDLE: string | undefined = undefined
 export const GITHUB_USERNAME = SOCIAL.github.handle
-
-/** The open-source template this site is built on (MIT, credited in the footer). */
-export const TEMPLATE_GITHUB_REPO = "ncdai/chanhdai.com"
-export const TEMPLATE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com"
 
 export const SOURCE_CODE_GITHUB_REPO = "aarvnd/arvind.codes"
 export const SOURCE_CODE_GITHUB_URL = "https://github.com/aarvnd/arvind.codes"

@@ -5,17 +5,13 @@ import { copyToClipboardWithEvent } from "@/utils/copy"
 import { useRouter } from "@bprogress/next/app"
 import { useTiks } from "@rexa-developer/tiks/react"
 import {
-  BookmarkIcon,
   BoxIcon,
   BriefcaseBusinessIcon,
-  CircleCheckBigIcon,
   CornerDownLeftIcon,
-  CrownIcon,
   DownloadIcon,
   FileTextIcon,
   GraduationCapIcon,
   LayersIcon,
-  LineChartIcon,
   MonitorIcon,
   MoonStarIcon,
   RssIcon,
@@ -39,19 +35,13 @@ import {
   CommandList,
   CommandShortcut,
 } from "@/components/ui/command"
-import { ComponentIcon } from "@/features/doc/components/component-icon"
 import type { DocPreview } from "@/features/doc/types/document"
 import { SOCIAL_ICONS } from "@/features/portfolio/components/social-link-icons"
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
 
 import { ArvindMark, getMarkSVG } from "./arvind-mark"
 import { getWordmarkSVG } from "./arvind-wordmark"
-import {
-  GridViewIcon,
-  NewsIcon,
-  ReactIcon,
-  SearchIcon,
-} from "./icons"
+import { NewsIcon, SearchIcon } from "./icons"
 import { Button } from "./ui/button"
 import { Kbd, KbdGroup } from "./ui/kbd"
 
@@ -68,12 +58,6 @@ type CommandLinkItem = {
   openInNewTab?: boolean
 }
 
-type BlockItem = {
-  name: string
-  description: string
-  categories: string[]
-}
-
 const MENU_LINKS: CommandLinkItem[] = [
   {
     title: "Home",
@@ -81,20 +65,6 @@ const MENU_LINKS: CommandLinkItem[] = [
     kind: "page",
     icon: <ArvindMark />,
     shortcut: "GH",
-  },
-  {
-    title: "Components",
-    href: "/components",
-    kind: "page",
-    icon: <ReactIcon />,
-    shortcut: "GC",
-  },
-  {
-    title: "Blocks",
-    href: "/blocks",
-    kind: "page",
-    icon: <GridViewIcon />,
-    shortcut: "GB",
   },
   {
     title: "Blog",
@@ -136,30 +106,6 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     kind: "page",
     icon: <BoxIcon />,
   },
-  {
-    title: "Awards",
-    href: "/#awards",
-    kind: "page",
-    icon: <CrownIcon />,
-  },
-  {
-    title: "Certifications",
-    href: "/#certs",
-    kind: "page",
-    icon: <CircleCheckBigIcon />,
-  },
-  {
-    title: "Bookmarks",
-    href: "/#bookmarks",
-    kind: "page",
-    icon: <BookmarkIcon />,
-  },
-  {
-    title: "Insights",
-    href: "/#insights",
-    kind: "page",
-    icon: <LineChartIcon />,
-  },
 ]
 
 const SOCIAL_LINK_ITEMS: CommandLinkItem[] = SOCIAL_LINKS.map((item) => ({
@@ -195,11 +141,9 @@ const OTHER_LINK_ITEMS: CommandLinkItem[] = [
 
 export function CommandMenu({
   docs,
-  blocks,
   enabledHotkeys = false,
 }: {
   docs: DocPreview[]
-  blocks: BlockItem[]
   enabledHotkeys?: boolean
 }) {
   const router = useRouter()
@@ -292,77 +236,6 @@ export function CommandMenu({
     [click, setTheme]
   )
 
-  const components = useMemo(
-    () =>
-      docs
-        .filter((doc) => doc.category === "components")
-        .sort((a, b) =>
-          a.title.localeCompare(b.title, "en", {
-            sensitivity: "base",
-          })
-        ),
-    [docs]
-  )
-
-  const componentsGroup = useMemo(() => {
-    if (!components || components.length === 0) {
-      return null
-    }
-
-    return (
-      <CommandGroup heading="Components">
-        {components.map((component) => {
-          return (
-            <CommandMenuItem
-              key={component.slug}
-              keywords={["component"]}
-              onHighlight={() => {
-                setSelectedCommandKind("component")
-              }}
-              onSelect={() => {
-                handleOpenLink(`/components/${component.slug}`)
-              }}
-            >
-              <ComponentIcon slug={component.slug} />
-              <p className="line-clamp-1">{component.title}</p>
-            </CommandMenuItem>
-          )
-        })}
-      </CommandGroup>
-    )
-  }, [components, handleOpenLink])
-
-  const blocksGroup = useMemo(() => {
-    if (!blocks || blocks.length === 0) {
-      return null
-    }
-
-    return (
-      <CommandGroup heading="Blocks">
-        {blocks.map((block) => {
-          return (
-            <CommandMenuItem
-              key={block.name}
-              keywords={["block"]}
-              onHighlight={() => {
-                setSelectedCommandKind("block")
-              }}
-              onSelect={() => {
-                handleOpenLink(`/blocks/${block.categories[0]}/${block.name}`)
-              }}
-            >
-              <GridViewIcon />
-              <p className="line-clamp-1">{block.description}</p>
-              <span className="ml-auto font-mono text-xs font-normal text-muted-foreground tabular-nums max-sm:hidden">
-                {block.name}
-              </span>
-            </CommandMenuItem>
-          )
-        })}
-      </CommandGroup>
-    )
-  }, [blocks, handleOpenLink])
-
   const blogLinks = useMemo(
     () =>
       docs
@@ -419,10 +292,6 @@ export function CommandMenu({
               onLinkSelect={handleOpenLink}
             />
 
-            {componentsGroup}
-
-            {blocksGroup}
-
             <CommandLinkGroup
               heading="Blog"
               links={blogLinks}
@@ -458,7 +327,6 @@ export function CommandMenu({
                 <TypeIcon />
                 Copy Logotype as SVG
               </CommandMenuItem>
-
             </CommandGroup>
 
             <CommandGroup heading="Theme">

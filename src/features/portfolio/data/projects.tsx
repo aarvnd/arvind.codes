@@ -39,11 +39,11 @@ export const PROJECTS: Project[] = [
       start: "08.2026",
     },
     link: "https://github.com/aarvnd",
-    skills: ["Next.js", "React 19", "Tailwind CSS v4", "shadcn/ui", "MDX", "Hostinger"],
-    description: `Portfolio, blog and shadcn registry built on the open-source chanhdai.com template.
+    skills: ["Next.js", "React 19", "Tailwind CSS v4", "MDX", "Hostinger"],
+    description: `My portfolio and blog, the site you are reading now.
 - Custom pixel mark, wordmark and an interactive isometric voxel logo generated from one bitmap.
 - Markdown routes and llms.txt so AI agents can read the profile directly.
-- Deployed as a Node.js app on Hostinger from a GitHub repository.`,
+- Webpack build with standalone output, deployed as a Node.js app on Hostinger.`,
     icon: <GlobeIcon />,
   },
   {

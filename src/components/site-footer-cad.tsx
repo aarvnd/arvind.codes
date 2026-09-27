@@ -1,4 +1,3 @@
-import { LICENSE, TEMPLATE_GITHUB_URL } from "@/config/site"
 import type { BuildInfo } from "@/lib/build-info"
 import { getBuildInfo, getStack } from "@/lib/build-info"
 import { cn } from "@/lib/utils"
@@ -11,11 +10,8 @@ import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
 // Imported here rather than through `@/config/site`, which client components
 // pull in, to keep the manifest out of client bundles.
 import packageJson from "../../package.json"
-// Precomputed by `pnpm registry:build`, so the count costs no registry import.
-import registryStats from "../../registry-stats.json"
 
 const INSPIRED_BY = [
-  "chanhdai.com",
   "Tailwind CSS",
   "shadcn/ui",
   "Vercel",
@@ -78,31 +74,7 @@ export function SiteFooterCad() {
               <time dateTime={build.date}>{build.date}</time>
             </Field>
 
-            <Field label="Registry">{registryStats.total} items</Field>
-
             <Field label="Deployed on">Hostinger</Field>
-
-            <Field label="Template">
-              <a
-                className="link-underline"
-                href={TEMPLATE_GITHUB_URL}
-                target="_blank"
-                rel="noopener"
-              >
-                ncdai/chanhdai.com
-              </a>
-            </Field>
-
-            <Field label="License">
-              <a
-                className="link-underline"
-                href={LICENSE.url}
-                target="_blank"
-                rel="noopener"
-              >
-                {LICENSE.name}
-              </a>
-            </Field>
 
             <Field label="Typeface">Geist</Field>
 
@@ -144,19 +116,6 @@ export function SiteFooterCad() {
           <div className="flex flex-col flex-wrap items-center gap-x-3 gap-y-1 sm:flex-row">
             <span>
               © {build.date.slice(0, 4)} {COPYRIGHT_HOLDER}.
-            </span>
-
-            <span>
-              Built on{" "}
-              <a
-                className="link-underline"
-                href={TEMPLATE_GITHUB_URL}
-                target="_blank"
-                rel="noopener"
-              >
-                chanhdai.com
-              </a>{" "}
-              (MIT).
             </span>
           </div>
 

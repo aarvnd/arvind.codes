@@ -1,6 +1,6 @@
-# AI agent guidelines for chanhdai.com
+# AI agent guidelines for arvind.codes
 
-Next.js 16 (App Router) portfolio, blog, and shadcn registry website.
+Next.js 16 (App Router) portfolio and blog. Started from the MIT-licensed chanhdai.com template (see ATTRIBUTION.md); the registry pages were removed, but `src/registry/` is still used as the internal UI component library.
 
 **Stack**: TypeScript, React 19, Tailwind CSS v4, shadcn/ui, MDX, Vitest, pnpm (Bun for scripts), Vercel
 

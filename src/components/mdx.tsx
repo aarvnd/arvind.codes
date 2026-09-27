@@ -36,7 +36,6 @@ import { Code } from "@/components/base/ui/typography"
 import { CodeCollapsibleWrapper } from "@/components/code-collapsible-wrapper"
 import { ComponentSource } from "@/components/component-source"
 import { AutoTypeTable } from "@/features/doc/components/auto-type-table"
-import { DocSponsors } from "@/features/doc/components/doc-sponsors"
 import { DocTestimonial } from "@/features/doc/components/doc-testimonial"
 import { DocTestimonial2 } from "@/features/doc/components/doc-testimonial-2"
 
@@ -97,7 +96,6 @@ const components: MDXRemoteProps["components"] = {
   FramedImage,
   DocTestimonial,
   DocTestimonial2,
-  DocSponsors,
   AutoTypeTable: (props) => <AutoTypeTable {...props} generator={generator} />,
 }
 
