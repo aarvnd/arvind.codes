@@ -50,6 +50,13 @@ const legacyBlogComponentRedirects = LEGACY_BLOG_COMPONENT_SLUGS.map(
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  // Hostinger builds the standalone bundle; set NEXT_OUTPUT_STANDALONE=1 to
+  // reproduce that locally. The file trace misses @swc/helpers, which Next's
+  // runtime requires lazily, so it is included by hand.
+  output: process.env.NEXT_OUTPUT_STANDALONE ? "standalone" : undefined,
+  outputFileTracingIncludes: {
+    "/**": ["./node_modules/@swc/helpers/**/*"],
+  },
   /**
    * Stamped once per build and inlined. Reading the clock at render time would
    * instead report whenever a page was regenerated, which drifts on the ISR
