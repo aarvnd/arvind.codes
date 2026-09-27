@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aarvnd/portfolio.git"
+    "url": "git+https://github.com/aarvnd/arvind.codes.git"
   },
   "scripts": {
     "dev": "next dev",

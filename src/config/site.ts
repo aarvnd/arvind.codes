@@ -53,8 +53,8 @@ export const GITHUB_USERNAME = SOCIAL.github.handle
 export const TEMPLATE_GITHUB_REPO = "ncdai/chanhdai.com"
 export const TEMPLATE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com"
 
-export const SOURCE_CODE_GITHUB_REPO = "aarvnd/portfolio"
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/aarvnd/portfolio"
+export const SOURCE_CODE_GITHUB_REPO = "aarvnd/arvind.codes"
+export const SOURCE_CODE_GITHUB_URL = "https://github.com/aarvnd/arvind.codes"
 
 export const UTM_PARAMS = {
   utm_source: "arvind.codes",
