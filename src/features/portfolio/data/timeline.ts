@@ -19,15 +19,15 @@ Started grinding DSA seriously across LeetCode and GeeksforGeeks.`,
     content: `Went independent as a full-stack developer and automation engineer.
 
 - Ticket management system in Node.js
-- First production WhatsApp support bot for an SMM panel
+- First production WhatsApp support bot for a client
 - Moved everything to self-managed Linux VPS infrastructure`,
   },
   {
     year: 2026,
     content: `Shipped the systems that run today:
 
-- SMM panel support and automation suite (WhatsApp + Telegram, provider relay)
-- Celebboost storefront with multi-gateway payments and 8-locale SEO
+- WhatsApp + Telegram support and admin automation for client businesses
+- E-commerce storefront with multi-gateway payments and 8-locale SEO
 - Self-hosted UPI payment gateway
 - LeetCode auto-grind bot pushing two solutions a day to GitHub
 - Bought arvind.codes and launched this site`,

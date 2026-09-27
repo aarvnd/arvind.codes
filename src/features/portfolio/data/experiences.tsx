@@ -19,7 +19,7 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Self-employed",
         icon: <CodeXmlIcon />,
-        description: `- Build and operate production systems end-to-end: payment infrastructure, support automation serving 300k+ panel users, e-commerce storefronts and developer tooling.
+        description: `- Build and operate production systems end-to-end for clients: payment infrastructure, e-commerce storefronts, support automation and developer tooling.
 - Own the full lifecycle: architecture, code, deploys and monitoring on self-managed VPS infrastructure (Linux, nginx, PM2, SSL, cron).
 - Ship Next.js / React frontends over Node.js and Java backends with REST APIs and SQL databases.
 - Integrate payment gateways (UPI, cards, crypto) with webhook signature verification, reconciliation and auto-refunds.`,
@@ -43,10 +43,10 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Self-employed",
         icon: <BotIcon />,
-        description: `- WhatsApp support bot that reads unread chats, checks order status through the panel's admin API and replies with templates.
-- Admin Telegram bot for full panel administration: orders, refills, user management and custom rates.
-- Provider reply relay that parses message edits, maps external order IDs to panel orders and notifies customers automatically.
-- Built an include-style request batcher (9 API calls to 1) and a whitelist sanitizer so provider data never leaks to customers.`,
+        description: `- WhatsApp support bots that read incoming chats, look up order status through a client's API and reply with templates.
+- Telegram admin bots for day-to-day operations: orders, customers and pricing managed from chat.
+- Event relays that parse upstream message updates and notify customers automatically, with a whitelist sanitizer so internal data never leaks.
+- Built an include-style request batcher that turned 9 API calls into 1.`,
         skills: [
           "Node.js",
           "Telegram Bot API",
@@ -64,9 +64,9 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Self-employed",
         icon: <ServerIcon />,
-        description: `- Run three Linux VPS boxes hosting storefronts, bots, cron pipelines and this site behind nginx with Let's Encrypt SSL.
+        description: `- Run Linux VPS boxes hosting storefronts, bots, cron pipelines and this site behind nginx with Let's Encrypt SSL.
 - PM2 process management, single-writer SQLite operations, WAL recovery runbooks and weekly security audits.
-- Zero-downtime server migration with encrypted-settings re-keying and rollback plan.`,
+- Zero-downtime server migration with encrypted-settings re-keying and a rollback plan.`,
         skills: ["Linux", "nginx", "PM2", "Cloudflare", "SQLite", "Security"],
       },
     ],

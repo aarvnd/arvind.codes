@@ -3,8 +3,6 @@ import {
   CreditCardIcon,
   GlobeIcon,
   LandmarkIcon,
-  ShoppingCartIcon,
-  StoreIcon,
   TicketIcon,
 } from "lucide-react"
 
@@ -35,27 +33,18 @@ export const PROJECTS: Project[] = [
     isExpanded: true,
   },
   {
-    id: "smm-panel-support-suite",
-    title: "SMM Panel Support & Automation Suite",
+    id: "arvind-codes",
+    title: "arvind.codes — This Site",
     period: {
-      start: "03.2026",
+      start: "08.2026",
     },
-    link: "https://themainsmm.com",
-    skills: [
-      "Node.js",
-      "SQLite",
-      "Telegram Bot API",
-      "WhatsApp",
-      "PM2",
-      "REST APIs",
-    ],
-    description: `WhatsApp + Telegram automation around a panel with 300k+ users.
-- WhatsApp support bot: order status lookups, templated replies, payment escalation with screenshots.
-- Admin Telegram bot: orders, refills, user management and custom rates from chat.
-- Provider reply relay that parses message edits, maps external to panel order IDs and notifies customers (partial completions handled).
-- Include-style batcher turned 9 API calls into 1; a central sanitizer guarantees provider data never leaks.`,
-    icon: <BotIcon />,
-    isExpanded: true,
+    link: "https://github.com/aarvnd",
+    skills: ["Next.js", "React 19", "Tailwind CSS v4", "shadcn/ui", "MDX", "Hostinger"],
+    description: `Portfolio, blog and shadcn registry built on the open-source chanhdai.com template.
+- Custom pixel mark, wordmark and an interactive isometric voxel logo generated from one bitmap.
+- Markdown routes and llms.txt so AI agents can read the profile directly.
+- Deployed as a Node.js app on Hostinger from a GitHub repository.`,
+    icon: <GlobeIcon />,
   },
   {
     id: "leetcode-daily-bot",
@@ -69,44 +58,7 @@ export const PROJECTS: Project[] = [
 - Picks the Problem of the Day plus one alternating Easy/Medium problem.
 - Generates a Java solution with an LLM, then gates it behind a local javac compile so broken code never ships.
 - Submits, polls the verdict, pushes in LeetSync format and sends a WhatsApp summary.`,
-    icon: <GlobeIcon />,
-  },
-  {
-    id: "celebboost",
-    title: "Celebboost — Social Growth Storefront",
-    period: {
-      start: "04.2026",
-    },
-    link: "https://celebboost.com",
-    skills: [
-      "Next.js",
-      "Express",
-      "SQLite",
-      "nginx",
-      "i18n",
-      "SEO",
-      "Payment APIs",
-    ],
-    description: `Full e-commerce platform: catalog, multi-gateway payments, admin SPA and 8-locale SEO.
-- Platform → service → tier → package catalog with per-node visibility and URL validation before order.
-- Card, UPI and crypto gateways with webhook reconciliation, auto-refunds and loyalty credits.
-- Vanilla-JS admin SPA with role-based staff permissions and per-method revenue reports.
-- 200+ generated SEO pages, runtime OG images and hreflang across 8 locales. Lighthouse 100/100/100 on the ads landing page.`,
-    icon: <StoreIcon />,
-  },
-  {
-    id: "tm-cart",
-    title: "TM Cart — Add-to-Cart for SMM Panels",
-    period: {
-      start: "08.2026",
-    },
-    link: "https://themainsmm.com",
-    skills: ["JavaScript", "Twig", "localStorage", "UX"],
-    description: `A cart layer retrofitted onto a closed panel platform using theme code only.
-- Add-to-Cart on every service card backed by a localStorage cart and a floating My Cart overlay.
-- Checkout auto-fills the panel's native mass-order form, so orders stay legitimate platform orders.
-- Shipped through Twig parsing quirks and a CodeMirror-only deploy path.`,
-    icon: <ShoppingCartIcon />,
+    icon: <BotIcon />,
   },
   {
     id: "ticket-management-system",
