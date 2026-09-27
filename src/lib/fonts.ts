@@ -8,12 +8,14 @@ const fontSans = GeistSans
 const fontMono = GeistMono
 
 const fontSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
   weight: ["400"],
   display: "swap",
   variable: "--font-serif",
 })
 
 const fontHandwritten = Caveat({
+  subsets: ["latin"],
   weight: ["400", "500"],
   display: "swap",
   variable: "--font-handwritten",

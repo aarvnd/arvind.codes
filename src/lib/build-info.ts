@@ -29,7 +29,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-CA", {
   day: "2-digit",
 })
 
-/** Stamped by `next.config.ts` at build time. */
+/** Stamped by `next.config.mjs` at build time. */
 const BUILD_DATE = dateFormatter.format(
   process.env.BUILD_TIMESTAMP
     ? new Date(process.env.BUILD_TIMESTAMP)

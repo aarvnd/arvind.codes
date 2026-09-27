@@ -1,5 +1,3 @@
-import type { NextConfig } from "next"
-
 /**
  * Component slugs that used to also render under /blog/<slug> (a shared MDX
  * pool) and were indexed there. After splitting content into category folders
@@ -40,7 +38,7 @@ const LEGACY_BLOG_COMPONENT_SLUGS = [
   "toc-minimap",
   "twemoji",
   "work-experience-component",
-] as const
+]
 
 const legacyBlogComponentRedirects = LEGACY_BLOG_COMPONENT_SLUGS.map(
   (slug) => ({
@@ -50,7 +48,8 @@ const legacyBlogComponentRedirects = LEGACY_BLOG_COMPONENT_SLUGS.map(
   })
 )
 
-const nextConfig: NextConfig = {
+/** @type {import("next").NextConfig} */
+const nextConfig = {
   /**
    * Stamped once per build and inlined. Reading the clock at render time would
    * instead report whenever a page was regenerated, which drifts on the ISR
