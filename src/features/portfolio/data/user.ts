@@ -15,8 +15,8 @@ export const USER: User = {
     "Grinding DSA daily.",
   ],
   address: "India",
-  phoneNumberB64: "", // E.164 format, base64 encoded; empty hides the phone row
-  emailB64: "Z2FtZXJiZXRhMTQ0QGdtYWlsLmNvbQ==", // base64 encoded
+  phoneNumberB64: "KzkxOTk5OTk0OTkwNA==", // E.164 format, base64 encoded
+  emailB64: "aGVsbG9AYXJ2aW5kLmNvZGVz", // base64 encoded
   website: "https://arvind.codes",
   jobTitle: "Full-Stack Developer & Automation Engineer",
   jobs: [
@@ -30,7 +30,7 @@ export const USER: User = {
   about: `- I'm Arvind — a full-stack developer who likes owning the whole stack: the code, the server, the deploy, and the 3 AM incident.
 - I build Next.js / React storefronts over Node.js and Java backends, plus Telegram / WhatsApp bots, payment integrations and schedulers that run 24/7.
 - Everything I ship runs on Linux VPS infrastructure I manage myself (nginx, PM2, SSL, cron, monitoring): storefronts, bots, cron pipelines and this site.
-- Off the clock I grind DSA on [LeetCode](https://leetcode.com/u/aarvnd/) and [GeeksforGeeks](https://www.geeksforgeeks.org/profile/aarvnd) — 1,000+ problems and counting.
+- Off the clock I grind DSA on [LeetCode](https://leetcode.com/u/aarvnd/) and [GeeksforGeeks](https://www.geeksforgeeks.org/profile/aarvnd) — 1,000+ problems and counting, all tracked on [Codolio](https://codolio.com/profile/Arvnd).
 - Open to full-stack / platform engineering work, automation projects and freelance builds — idea to deployed product.
 `,
   avatar: "/images/avatar.jpg",

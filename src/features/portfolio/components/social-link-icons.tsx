@@ -1,6 +1,6 @@
-import { BracesIcon, CodeXmlIcon } from "lucide-react"
+import { BracesIcon, ChartNoAxesColumnIcon, CodeXmlIcon } from "lucide-react"
 
-import { GitHubIcon } from "@/components/icons"
+import { GitHubIcon, LinkedInIcon } from "@/components/icons"
 import type { SocialName } from "@/features/portfolio/data/social-links"
 
 /**
@@ -10,6 +10,8 @@ import type { SocialName } from "@/features/portfolio/data/social-links"
  */
 export const SOCIAL_ICONS: Record<SocialName, React.JSX.Element> = {
   github: <GitHubIcon />,
+  linkedin: <LinkedInIcon />,
   leetcode: <CodeXmlIcon />,
   geeksforgeeks: <BracesIcon />,
+  codolio: <ChartNoAxesColumnIcon />,
 }

@@ -12,6 +12,12 @@ export const SOCIAL = {
     href: "https://github.com/aarvnd",
     sameAs: true,
   },
+  linkedin: {
+    title: "LinkedIn",
+    handle: "arvnd-k",
+    href: "https://www.linkedin.com/in/arvnd-k/",
+    sameAs: true,
+  },
   leetcode: {
     title: "LeetCode",
     handle: "aarvnd",
@@ -22,6 +28,12 @@ export const SOCIAL = {
     title: "GeeksforGeeks",
     handle: "aarvnd",
     href: "https://www.geeksforgeeks.org/profile/aarvnd",
+    sameAs: true,
+  },
+  codolio: {
+    title: "Codolio",
+    handle: "Arvnd",
+    href: "https://codolio.com/profile/Arvnd",
     sameAs: true,
   },
 } satisfies Record<string, SocialProfile>

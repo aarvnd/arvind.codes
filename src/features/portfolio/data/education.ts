@@ -2,13 +2,13 @@ import type { Education } from "@/features/portfolio/types/education"
 
 export const EDUCATION: Education[] = [
   {
-    id: "btech-cs",
-    school: "B.Tech in Computer Science",
+    id: "galgotias",
+    school: "Galgotias University",
     degree: "Bachelor of Technology",
     fieldOfStudy: "Computer Science",
     period: {
-      start: "2023",
-      end: "2027",
+      start: "2024",
+      end: "2028",
     },
     description: `- Core CS: data structures and algorithms, DBMS, operating systems, computer networks.
 - Coursework projects in Java (banking management system) and machine learning labs in Python.
@@ -23,5 +23,23 @@ export const EDUCATION: Education[] = [
       "Machine Learning",
     ],
     isExpanded: true,
+  },
+  {
+    id: "ganga-singh-college",
+    school: "Ganga Singh College",
+    degree: "Senior Secondary (Class 12)",
+    period: {
+      start: "2020",
+      end: "2022",
+    },
+  },
+  {
+    id: "scholars-abode",
+    school: "Scholars Abode",
+    degree: "Secondary (Class 10)",
+    period: {
+      start: "2020",
+      end: "2020",
+    },
   },
 ]

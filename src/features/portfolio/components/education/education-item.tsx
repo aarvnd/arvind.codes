@@ -54,8 +54,8 @@ export function EducationItem({ item }: { item: Education }) {
               <dt className="sr-only">Employment period</dt>
               <dd className="flex items-center gap-0.5 tabular-nums">
                 <span>{start}</span>
-                <span className="font-mono">—</span>
-                {isOngoing ? (
+                {start !== end && <span className="font-mono">—</span>}
+                {start === end ? null : isOngoing ? (
                   <InfinityIcon
                     className="size-4.5 translate-y-[0.5px]"
                     aria-label="Present"

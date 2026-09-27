@@ -1,18 +1,28 @@
 import type { TimelineMilestone } from "../types/timeline"
 
 /** First year on the timeline; the counter shows years since then. */
-export const TIMELINE_BIRTH_YEAR = 2023
+export const TIMELINE_BIRTH_YEAR = 2020
 
 export const TIMELINE_MILESTONES: TimelineMilestone[] = [
   {
+    year: 2020,
+    content: "Finished Class 10 at Scholars Abode.",
+  },
+  { year: 2021 },
+  {
+    year: 2022,
+    content:
+      "Finished Class 12 at Ganga Singh College. First lines of Java and C.",
+  },
+  {
     year: 2023,
-    content: "Started B.Tech in Computer Science. First lines of Java and C.",
+    content: "Started grinding DSA seriously on LeetCode and GeeksforGeeks.",
   },
   {
     year: 2024,
-    content: `Built Bank-V3, a Java banking management system, as a team project.
+    content: `Started B.Tech in Computer Science at Galgotias University.
 
-Started grinding DSA seriously across LeetCode and GeeksforGeeks.`,
+Built Bank-V3, a Java banking management system, as a team project.`,
   },
   {
     year: 2025,

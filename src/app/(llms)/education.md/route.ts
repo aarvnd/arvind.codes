@@ -10,7 +10,7 @@ ${EDUCATION.map((item) => {
     ? `\n\nSkills: ${item.skills.join(", ")}`
     : ""
   const description = item.description ? `\n\n${item.description.trim()}` : ""
-  return `## ${heading}${school}\n\nDuration: ${item.period.start} - ${item.period.end || "Present"}${skills}${description}`
+  return `## ${heading}${school}\n\nDuration: ${item.period.start === item.period.end ? item.period.start : `${item.period.start} - ${item.period.end || "Present"}`}${skills}${description}`
 }).join("\n\n")}
 `
 
