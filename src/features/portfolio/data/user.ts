@@ -33,12 +33,12 @@ export const USER: User = {
 - Off the clock I grind DSA on [LeetCode](https://leetcode.com/u/aarvnd/) and [GeeksforGeeks](https://www.geeksforgeeks.org/profile/aarvnd) — 1,000+ problems and counting, all tracked on [Codolio](https://codolio.com/profile/Arvnd).
 - Open to full-stack / platform engineering work, automation projects and freelance builds — idea to deployed product.
 `,
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar-2026-10.jpg",
   avatarVariants: {
-    lightOff: "/images/avatar-chrome.jpg",
-    lightOn: "/images/avatar.jpg",
-    darkOff: "/images/avatar-chrome.jpg",
-    darkOn: "/images/avatar.jpg",
+    lightOff: "/images/avatar-2026-10-off-light.jpg",
+    lightOn: "/images/avatar-2026-10.jpg",
+    darkOff: "/images/avatar-2026-10-off-dark.jpg",
+    darkOn: "/images/avatar-2026-10.jpg",
   },
   ogImage: "https://arvind.codes/images/og.png",
   namePronunciationUrl: "",
