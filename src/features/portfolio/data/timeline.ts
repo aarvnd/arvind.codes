@@ -39,7 +39,7 @@ Built Bank-V3, a Java banking management system, as a team project.`,
 - WhatsApp + Telegram support and admin automation for client businesses
 - E-commerce storefront with multi-gateway payments and 8-locale SEO
 - Self-hosted UPI payment gateway
-- LeetCode auto-grind bot pushing two solutions a day to GitHub
+- Arvind Dots, a self-hosted AI agent workspace with approval-gated actions
 - Bought arvind.codes and launched this site`,
   },
 ]

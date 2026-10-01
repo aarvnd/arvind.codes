@@ -33,6 +33,30 @@ export const PROJECTS: Project[] = [
     isExpanded: true,
   },
   {
+    id: "arvind-dots",
+    title: "Arvind Dots — Personal AI Agent Workspace",
+    period: {
+      start: "10.2026",
+    },
+    link: "https://dots.arvind.codes",
+    skills: [
+      "Next.js",
+      "React 19",
+      "FastAPI",
+      "Python",
+      "SQLite",
+      "Docker",
+      "Playwright",
+      "nginx",
+      "PM2",
+    ],
+    description: `Self-hosted AI agent workspace that asks before it acts, running at dots.arvind.codes.
+- Streaming chat with assistants, image attachments and per-assistant model selection against any Responses-compatible API.
+- Deny-by-default action gateway: workspace and computer actions pause for approval and land in an audit log.
+- Optional Docker/Playwright computer runtime per assistant, Composio app connectors and /search web lookups.`,
+    icon: <BotIcon />,
+  },
+  {
     id: "arvind-codes",
     title: "arvind.codes — This Site",
     period: {
@@ -45,20 +69,6 @@ export const PROJECTS: Project[] = [
 - Markdown routes and llms.txt so AI agents can read the profile directly.
 - Webpack build with standalone output, deployed as a Node.js app on Hostinger.`,
     icon: <GlobeIcon />,
-  },
-  {
-    id: "leetcode-daily-bot",
-    title: "LeetCode Auto-Grind Bot",
-    period: {
-      start: "07.2026",
-    },
-    link: "https://github.com/aarvnd/DSA-Leetcode",
-    skills: ["Python", "LeetCode API", "Gemini", "GitHub API", "cron", "Java"],
-    description: `Cron bot that solves, compiles, verifies and pushes two LeetCode problems a day to GitHub.
-- Picks the Problem of the Day plus one alternating Easy/Medium problem.
-- Generates a Java solution with an LLM, then gates it behind a local javac compile so broken code never ships.
-- Submits, polls the verdict, pushes in LeetSync format and sends a WhatsApp summary.`,
-    icon: <BotIcon />,
   },
   {
     id: "ticket-management-system",
