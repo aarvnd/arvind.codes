@@ -47,3 +47,6 @@ next-env.d.ts
 # ide / local
 .idea
 .claude/settings.local.json
+
+# macOS custom folder icon file (name ends in a carriage return)
+Icon?
